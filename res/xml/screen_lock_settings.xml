@@ -58,4 +58,10 @@
         android:title="@string/show_qs_on_secure_keyguard_title"
         android:summary="@string/show_qs_on_secure_keyguard_summary" />
 
+    <!-- Lineage additions, available in pin/pattern/password/slide -->
+    <SwitchPreference
+        android:key="lockscreen_scramble_pin_layout"
+        android:title="@string/unlock_scramble_pin_layout_title"
+        android:summary="@string/unlock_scramble_pin_layout_summary" />
+
 </PreferenceScreen>
