@@ -24,6 +24,9 @@ import android.os.UserHandle;
 
 import androidx.annotation.Nullable;
 
+import co.aospa.settings.security.screenlock.PatternErrorVisiblePreferenceController;
+import co.aospa.settings.security.screenlock.PatternDotsVisiblePreferenceController;
+
 import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
@@ -81,6 +84,10 @@ public class ScreenLockSettings extends DashboardFragment
         controllers.add(new PatternVisiblePreferenceController(
                 context, MY_USER_ID, lockPatternUtils));
         controllers.add(new PinPrivacyPreferenceController(
+                context, MY_USER_ID, lockPatternUtils));
+        controllers.add(new PatternErrorVisiblePreferenceController(
+                context, MY_USER_ID, lockPatternUtils));
+        controllers.add(new PatternDotsVisiblePreferenceController(
                 context, MY_USER_ID, lockPatternUtils));
         controllers.add(new PowerButtonInstantLockPreferenceController(
                 context, MY_USER_ID, lockPatternUtils));
