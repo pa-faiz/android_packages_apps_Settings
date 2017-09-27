@@ -333,4 +333,10 @@
     <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
     <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
 
+    <!-- OTA App (OpenDelta) -->
+    <string name="update_settings_title">Paranoid Updater</string>
+    <string name="update_settings_summary">Check for latest version or local install</string>
+    <string name="update_package" translatable="false">eu.chainfire.opendelta</string>
+    <string name="update_activity" translatable="false">eu.chainfire.opendelta.MainActivity</string>
+
 </resources>
