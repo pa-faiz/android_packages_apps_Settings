@@ -160,4 +160,12 @@
     <string name="system_black_theme_title">Use Black theme</string>
     <string name="system_black_theme_summary">Force black background colors</string>
 
+    <!-- Torch Power button gestures -->
+    <string name="power_button_torch_title">Quick torch</string>
+    <string name="power_button_torch_summary">When the screen is off, long-pressing power button will enable torch</string>
+
+    <!-- About phone screen,  setting option name  [CHAR LIMIT=40] -->
+    <string name="build_date">Build date</string>
+    <string name="about_device_name">Device</string>
+
 </resources>
