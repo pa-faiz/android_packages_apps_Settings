@@ -309,4 +309,9 @@
     <string name="hide_app_desc">If you hide this app, it will not be visible to Android and other apps, and they may no longer function as intended. Keep in mind, hiding an app preserves it data. By hiding, you turn this app off and hide it on your device.</string>
     <!-- Label for showing hidden apps in list [CHAR LIMIT=40] -->
     <string name="filter_hidden_apps">Hidden apps</string>
+
+    <!-- Cloudflare DNS Option -->
+    <string name="private_dns_mode_cloudflare" translatable="false">Cloudflare DNS</string>
+    <!-- Cloudflare DNS hostname -->
+    <string name="private_dns_hostname_cloudflare" translatable="false">one.one.one.one</string>
 </resources>
