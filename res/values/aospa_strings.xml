@@ -183,4 +183,11 @@
     <!-- Auto pin confirm -->
     <string name="lock_screen_auto_pin_confirm_summary_4">Unlock automatically if you input a correct PIN of 4 digits or more. This is slightly less secure than tapping Enter to confirm.</string>
 
+    <!-- Add sliders for color balance adjustment via ColorDisplayManager -->
+    <string name="color_mode_balance_category">Color balance</string>
+    <string name="color_mode_balance_red">Red strength</string>
+    <string name="color_mode_balance_green">Green strength</string>
+    <string name="color_mode_balance_blue">Blue strength</string>
+    <string name="keywords_color_balance">color, color balance, color correction, red, green, blue, LiveDisplay</string>
+
 </resources>
