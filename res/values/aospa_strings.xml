@@ -207,4 +207,9 @@
     <string name="network_traffic_autohide_title">Hide network traffic indicator is inactive</string>
     <string name="network_traffic_autohide_summary">Hide when network traffic indicator is below 1 KB/s</string>
 
+    <!-- Gesture navbar length -->
+    <string name="gesture_navbar_length_title">Pill length</string>
+    <string name="short_label">Short</string>
+    <string name="long_label">Long</string>
+
 </resources>

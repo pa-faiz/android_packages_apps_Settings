@@ -32,8 +32,7 @@
             android:key="assistant_gesture_corner_swipe"
             android:title="@string/assistant_corner_gesture_title"
             android:summary="@string/assistant_corner_gesture_summary"
-            settings:controller="com.android.settings.gestures.GestureNavigationSettingsAssistController"
-        />
+            settings:controller="com.android.settings.gestures.GestureNavigationSettingsAssistController"/>
 
     </PreferenceCategory>
 
@@ -55,6 +54,15 @@
             android:max="2"
             settings:textStart="@string/low_label"
             settings:textEnd="@string/high_label"/>
+
+        <com.android.settings.widget.LabeledSeekBarPreference
+              android:key="gesture_navbar_length_preference"
+              android:title="@string/gesture_navbar_length_title"
+              android:max="2"
+              android:selectable="true"
+              settings:textStart="@string/short_label"
+	      settings:textEnd="@string/long_label"/>
+
     </PreferenceCategory>
 
     <co.aospa.framework.preference.SecureSettingSwitchPreference
