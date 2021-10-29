@@ -212,4 +212,7 @@
     <string name="short_label">Short</string>
     <string name="long_label">Long</string>
 
+    <!-- CAF tag version in About phone -->
+    <string name="caf_revision_tag">CAF revision</string>
+
 </resources>
