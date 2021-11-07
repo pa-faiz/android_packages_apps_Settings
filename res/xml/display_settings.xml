@@ -201,7 +201,13 @@
                android:title="@string/ignore_window_secure_title"
                android:summary="@string/ignore_window_secure_summary"
                android:defaultValue="false"/>
-	
+
+        <co.aospa.framework.preference.SystemSettingSwitchPreference
+               android:key="double_tap_sleep_lockscreen"
+               android:title="@string/double_tap_sleep_lockscreen_title"
+               android:summary="@string/double_tap_sleep_lockscreen_summary"
+               android:defaultValue="false" />	
+
         <ListPreference
             android:key="theme"
             android:title="@string/device_theme"
