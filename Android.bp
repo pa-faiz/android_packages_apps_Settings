@@ -113,6 +113,12 @@ android_library {
         "kotlinx-coroutines-core",
         "kotlinx-coroutines-android",
         "co.aospa.framework",
+        "androidx.fragment_fragment",
+        "androidx.fragment_fragment-ktx",
+        "androidx.preference_preference-ktx",
+        "kotlin-stdlib",
+        "kotlinx_coroutines_android",
+        "kotlinx_coroutines",
     ],
 
     plugins: ["androidx.room_room-compiler-plugin"],
