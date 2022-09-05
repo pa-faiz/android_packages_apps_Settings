@@ -421,4 +421,9 @@
     <!-- Force ongoing notifications to be non dismissible -->
     <string name="notification_force_non_dismissible_title">Force ongoing notifications to be non-dismissible</string>
     <string name="notification_force_non_dismissible_summary">This prevents you to swipe away notifications that cannot be cleared by "clear all". Useful if you tend to accidentally swipe those notifications away.</string>
+
+    <!-- Per-app volume control -->
+    <string name="app_volume">App volume</string>
+    <string name="app_volume_title">Per-app volume control</string>
+    <string name="app_volume_summary">Allow to set different volume levels for each app</string>
 </resources>
