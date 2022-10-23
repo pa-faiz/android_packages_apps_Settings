@@ -215,4 +215,8 @@
     <!-- CAF tag version in About phone -->
     <string name="caf_revision_tag">CAF revision</string>
 
+    <!-- Show clipboard overlay -->
+    <string name="show_clipboard_overlay_title">Show clipboard overlay</string>
+    <string name="show_clipboard_overlay_summary">Show an overlay in the left bottom corner of the screen when something is copied to the clipboard</string>
+
 </resources>
