@@ -298,4 +298,11 @@
     <string name="lockscreen_weather_provider_none">None</string>
     <string name="lockscreen_weather_provider_default">Google (default)</string>
     <string name="lockscreen_weather_provider_omni">OmniJaws</string>
+
+    <!-- Prevent pointer accleration -->
+    <string name="prevent_pointer_acceleration_title">Pointer acceleration</string>
+    <string name="prevent_pointer_acceleration_full">Full (Pointer + Wheel)</string>
+    <string name="prevent_pointer_acceleration_wheel">Wheel only</string>
+    <string name="prevent_pointer_acceleration_pointer">Pointer only</string>
+    <string name="prevent_pointer_acceleration_none">None</string>
 </resources>
