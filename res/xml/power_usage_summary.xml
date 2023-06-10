@@ -51,11 +51,18 @@
         settings:keywords="@string/keywords_battery_saver"
         settings:controller="com.android.settings.fuelgauge.BatterySaverController" />
 
-    <!-- <SwitchPreference
+    <Preference
+        android:key="charging_control"
+        android:title="@string/charging_control_title"
+        android:summary="@string/charging_control_summary"
+        android:fragment="com.android.settings.derp.health.ChargingControlSettings"
+        settings:controller="com.android.settings.derp.health.ChargingControlPreferenceController" />
+
+    <SwitchPreference
         android:key="battery_percentage"
         android:title="@string/battery_percentage"
         android:summary="@string/battery_percentage_description"
-        settings:controller="com.android.settings.display.BatteryPercentagePreferenceController" /> -->
+        settings:controller="com.android.settings.display.BatteryPercentagePreferenceController" />
 
     <!-- Battery settings -->
     <Preference
