@@ -117,8 +117,21 @@
     <!-- Auto pin confirm -->
     <string name="lock_screen_auto_pin_confirm_summary_custom">Unlock automatically if you input a correct PIN. This is slightly less secure than tapping Enter to confirm.</string>
 
-    <!-- Navbar options -->
-    <string name="navbar_invert_layout_title">Invert navigation bar layout</string>
-    <string name="navbar_invert_info">Swap the \"Back\" and \"Recents\" buttons on the navigation bar</string>
+    <!-- Navbar Hint Hide -->
+    <string name="show_navbar_gesture_bar_title">Gesture bar</string>
+    <string name="show_navbar_gesture_bar_summary">Show gesture bar at the bottom of the screen</string>
+
+    <!-- Vibration patterns -->
+    <string name="notification_vibration_pattern_title">Notification vibration pattern</string>
+    <string name="ring_vibration_pattern_title">Ring vibration pattern</string>
+    <string name="pattern_default">Device default</string>
+    <string name="pattern_dzzz" translatable="false">dzzz</string>
+    <string name="pattern_dzzz_dzzz" translatable="false">dzzz-dzzz</string>
+    <string name="pattern_dzzz_da" translatable="false">dzzz-da</string>
+    <string name="pattern_mm_mm_mm" translatable="false">mm-mm-mm</string>
+    <string name="pattern_da_mm" translatable="false">da-mm</string>
+    <string name="pattern_da_da" translatable="false">da-da</string>
+    <string name="pattern_da_da_dzzz" translatable="false">da-da-dzzz</string>
+    <string name="pattern_da_dzzz_da" translatable="false">da-dzzz-da</string>
 
 </resources>
