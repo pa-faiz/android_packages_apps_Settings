@@ -58,7 +58,6 @@
         settings:controller="com.android.settings.fuelgauge.batterytip.BatteryManagerPreferenceController"
         settings:keywords="@string/keywords_battery_adaptive_preferences" />
 
-    <!-- Charging control -->
     <Preference
         android:key="charging_control"
         android:title="@string/charging_control_title"
@@ -70,11 +69,6 @@
         android:title="@string/battery_percentage"
         android:summary="@string/battery_percentage_description"
         settings:controller="com.android.settings.display.BatteryPercentagePreferenceController" />
-
-    <com.android.settings.fuelgauge.batteryusage.PowerGaugePreference
-        android:key="battery_health"
-        android:title="@string/battery_health_title"
-        android:selectable="false" />
 
     <Preference
        	android:key="statusbar_battery"
