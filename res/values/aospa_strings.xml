@@ -134,9 +134,6 @@
     <string name="pattern_da_da_dzzz" translatable="false">da-da-dzzz</string>
     <string name="pattern_da_dzzz_da" translatable="false">da-dzzz-da</string>
 
-    <!-- Auto pin confirm -->
-    <string name="lock_screen_auto_pin_confirm_summary_custom">Unlock automatically if you input a correct PIN. This is slightly less secure than tapping Enter to confirm.</string>
-
     <!-- Doze enablement -->
     <string name="doze_enabled_title">Ambient display</string>
     <string name="doze_enabled_summary">Whether to enable the doze package functionality</string>
@@ -175,9 +172,6 @@
     <!-- Ignore window secure -->
     <string name="ignore_window_secure_title">Ignore window secure flags</string>
     <string name="ignore_window_secure_summary">Remove screenshot and screenrecord limits for all apps. This can be convenient in some cases but may lead to privacy leaks.</string>
-
-    <!-- Auto pin confirm -->
-    <string name="lock_screen_auto_pin_confirm_summary_4">Unlock automatically if you input a correct PIN of 4 digits or more. This is slightly less secure than tapping Enter to confirm.</string>
 
     <!-- Add sliders for color balance adjustment via ColorDisplayManager -->
     <string name="color_mode_balance_category">Color balance</string>
