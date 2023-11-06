@@ -163,11 +163,13 @@
                 android:persistent="true"
                 settings:controller="com.android.settings.network.telephony.Enabled5GPreferenceController"/>
 
-            <SwitchPreference
+            <com.android.settingslib.RestrictedSwitchPreference
                 android:key="enable_2g"
                 android:title="@string/enable_2g_title"
                 android:summary="@string/enable_2g_summary"
-                settings:controller="com.android.settings.network.telephony.Enable2gPreferenceController" />
+                settings:controller="com.android.settings.network.telephony.Enable2gPreferenceController"
+                settings:useAdminDisabledSummary="true"
+                settings:userRestriction="no_cellular_2g"/>
 
             <SwitchPreference
                 android:key="require_cellular_encryption"
