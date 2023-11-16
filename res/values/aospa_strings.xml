@@ -30,4 +30,7 @@
     <string name="lock_pattern_size_5" translatable="false">5 \u00d7 5</string>
     <string name="lock_pattern_size_6" translatable="false">6 \u00d7 6</string>
     <string name="lock_settings_picker_pattern_size_message">Choose a pattern size</string>
+
+    <!-- Summary of the lock screen auto pin confirm setting. [CHAR LIMIT=NONE] -->
+    <string name="lock_screen_auto_pin_confirm_summary">Unlock automatically if you input a correct PIN of 4 digits or more. This is slightly less secure than tapping Enter to confirm.</string>
 </resources>
