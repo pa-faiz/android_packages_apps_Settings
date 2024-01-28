@@ -85,6 +85,12 @@
             android:key="pocket_judge"
             android:title="@string/proximity_wake_title"
             android:summary="@string/proximity_wake_summary" />
+
+        <Preference
+            android:key="always_on_display_schedule"
+            android:title="@string/always_on_display_schedule_title"
+            android:summary="@string/aod_schedule_summary"
+            android:fragment="com.android.settings.dashboard.AODSchedule" />
     </PreferenceCategory>
 
     <PreferenceCategory
