@@ -12500,4 +12500,15 @@
     <string name="ciwlan_exit_notification_positive_button">OPEN SETTINGS</string>
     <string name="ciwlan_exit_notification_negative_button">DISMISS</string>
     <string name="ciwlan_channel_name">Voice Over Cellular Internet</string>
+
+    <!-- Dashboard categories -->
+    <string name="top_level_connectivity">Connectivity</string>
+    <string name="top_level_personalize">Personalize</string>
+    <string name="top_level_security" translatable="false">@string/security_settings_title</string>
+    <string name="top_level_system">System</string>
+    <string name="top_level_paranoid">Paranoid Features</string>
+    <string name="top_level_apps_notif">Apps and Notifications</string>
+    <string name="top_level_bat_sto">Battery and Storage</string>
+    <string name="top_level_emer_loc">Location and Emergency</string>
+
 </resources>

@@ -19,16 +19,22 @@ package com.android.settings.homepage;
 import static com.android.settings.search.actionbar.SearchMenuController.NEED_SEARCH_ICON_IN_ACTION_BAR;
 import static com.android.settingslib.search.SearchIndexable.MOBILE;
 
+import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.settings.SettingsEnums;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.Fragment;
@@ -52,6 +58,8 @@ import com.android.settings.widget.HomepagePreferenceLayoutHelper.HomepagePrefer
 import com.android.settingslib.core.instrumentation.Instrumentable;
 import com.android.settingslib.drawer.Tile;
 import com.android.settingslib.search.SearchIndexable;
+import com.android.settingslib.widget.LayoutPreference;
+import com.android.settings.widget.EntityHeaderController;
 
 @SearchIndexable(forTarget = MOBILE)
 public class TopLevelSettings extends DashboardFragment implements SplitLayoutListener,
@@ -208,16 +216,6 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         super.onCreatePreferences(savedInstanceState, rootKey);
-        final PreferenceScreen screen = getPreferenceScreen();
-        final int count = screen.getPreferenceCount();
-        for (int i = 0; i < count; i++) {
-            final Preference preference = screen.getPreference(i);
-
-            String key = preference.getKey();
-            if (key.equals("top_level_paranoid_settings")){
-                preference.setLayoutResource(R.layout.somethingos_dashboard_preference_single);
-            }
-        }
         int tintColor = Utils.getHomepageIconColor(getContext());
         iteratePreferences(preference -> {
             Drawable icon = preference.getIcon();
@@ -225,6 +223,48 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 icon.setTint(tintColor);
             }
         });
+        onSetPrefCard();
+    }
+
+    private void onSetPrefCard() {
+        final PreferenceScreen screen = getPreferenceScreen();
+        final int count = screen.getPreferenceCount();
+        for (int i = 0; i < count; i++) {
+            final Preference preference = screen.getPreference(i);
+
+            String key = preference.getKey();
+            if (key == null) continue;
+            if (key.equals("top_level_paranoid_settings")) {
+                preference.setLayoutResource(R.layout.somethingos_dashboard_preference_single);
+            } else if (key.equals("top_level_network")
+                || key.equals("top_level_apps")
+            	|| key.equals("top_level_battery")
+            	|| key.equals("top_level_display")
+            	|| key.equals("top_level_safety_center")
+            	|| key.equals("top_level_location")
+            	|| key.equals("top_level_system")){
+                preference.setLayoutResource(R.layout.lmo_dashboard_preference_top);
+            } else if (key.equals("top_level_communal")
+                || key.equals("top_level_storage")
+            	|| key.equals("top_level_wallpaper")
+            	|| key.equals("top_level_security")
+            	|| key.equals("top_level_privacy")
+            	|| key.equals("top_level_wellbeing")){
+                preference.setLayoutResource(R.layout.lmo_dashboard_preference_middle);
+            } else if (key.equals("top_level_connected_devices")
+                || key.equals("top_level_notifications")
+            	|| key.equals("top_level_sound")
+            	|| key.equals("top_level_accessibility")
+            	|| key.equals("top_level_accounts")
+            	|| key.equals("top_level_about_device")
+            	|| key.equals("top_level_emergency")){
+                preference.setLayoutResource(R.layout.lmo_dashboard_preference_bottom);
+            } else if ("top_level_google".equals(key)){
+                preference.setLayoutResource(R.layout.lmo_dashboard_preference_middle);
+            } else if (key.equals("top_level_paranoid")) {
+                preference.setLayoutResource(R.layout.lmo_first_header_pref);
+            }
+        }
     }
 
     @Override
