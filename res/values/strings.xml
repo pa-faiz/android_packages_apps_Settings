@@ -12511,4 +12511,8 @@
     <string name="top_level_bat_sto">Battery and Storage</string>
     <string name="top_level_emer_loc">Location and Emergency</string>
 
+    <!-- Search -->
+    <string name="search">Search</string>
+    <string name="search_apps">Search apps</string>
+
 </resources>
