@@ -82,6 +82,7 @@ public class LockscreenDashboardFragment extends DashboardFragment
     private static final String KEY_WEATHER_PREFS = "lockscreen_weather_prefs";
     private static final String KEY_WEATHER_LOCATION = "lockscreen_weather_location";
     private static final String KEY_WEATHER_TEXT = "lockscreen_weather_text";
+    private static final String KEY_WEATHER_CLICK = "lockscreen_weather_click_updates";
 
     private AmbientDisplayConfiguration mConfig;
     private OwnerInfoPreferenceController mOwnerInfoPreferenceController;
@@ -91,6 +92,7 @@ public class LockscreenDashboardFragment extends DashboardFragment
     private Preference mWeatherPrefs;
     private SystemSettingSwitchPreference mWeatherLocation;
     private SystemSettingSwitchPreference mWeatherText;
+    private SystemSettingSwitchPreference mWeatherClick;
 
     @Override
     public int getMetricsCategory() {
@@ -116,6 +118,7 @@ public class LockscreenDashboardFragment extends DashboardFragment
         mWeatherLocation = screen.findPreference(KEY_WEATHER_LOCATION);
         mWeatherText = screen.findPreference(KEY_WEATHER_TEXT);
         ListPreference weatherProvider = screen.findPreference(KEY_WEATHER_PROVIDER);
+        mWeatherClick = screen.findPreference(KEY_WEATHER_CLICK);
         final int provider = Settings.System.getInt(
                 getContentResolver(), KEY_WEATHER_PROVIDER, LOCKSCREEN_WEATHER_PROVIDER_DEFAULT);
         weatherProvider.setValueIndex(provider);
@@ -207,6 +210,7 @@ public class LockscreenDashboardFragment extends DashboardFragment
         mWeatherPrefs.setVisible(enabled);
         mWeatherLocation.setVisible(enabled);
         mWeatherText.setVisible(enabled);
+        mWeatherClick.setVisible(enabled);
     }
 
     private AmbientDisplayConfiguration getConfig(Context context) {
