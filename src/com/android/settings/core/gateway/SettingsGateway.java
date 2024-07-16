@@ -18,6 +18,7 @@ package com.android.settings.core.gateway;
 
 import co.aospa.settings.statusbar.StatusBarSettings;
 import co.aospa.settings.statusbar.NetworkTrafficSettings;
+import co.aospa.settings.powermenu.PowerMenuActions;
 
 import com.android.settings.AllInOneTetherSettings;
 import com.android.settings.DisplaySettings;
@@ -350,6 +351,7 @@ public class SettingsGateway {
             NightDisplaySettings.class.getName(),
             StatusBarSettings.class.getName(),
             NetworkTrafficSettings.class.getName(),
+            PowerMenuActions.class.getName(),
             ManageDomainUrls.class.getName(),
             AutomaticStorageManagerSettings.class.getName(),
             StorageDashboardFragment.class.getName(),
