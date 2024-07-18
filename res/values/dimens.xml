@@ -443,10 +443,4 @@
     <dimen name="screen_flash_color_button_inner_circle_size">42dp</dimen>
     <dimen name="screen_flash_color_button_inner_circle_padding">3dp</dimen>
     <dimen name="screen_flash_color_button_inner_circle_stroke">1dp</dimen>
-
-    <!-- Dashboard dimens -->
-    <dimen name="lmo_radius">28dp</dimen>
-    <dimen name="lmo_radius_merge">5dp</dimen>
-    <dimen name="lmo_pref_horizontal_padding">16dp</dimen>
-    <dimen name="lmo_pref_horizontal_padding-negative">-16dp</dimen>
 </resources>
