@@ -138,6 +138,11 @@ public abstract class AppInfoBase extends SettingsPreferenceFragment
                 mPackageName = intent.getData().getSchemeSpecificPart();
             }
         }
+        if (!hasInteractAcrossUsersPermission()) {
+            Log.w(TAG, "Intent not valid.");
+            finish();
+            return "";
+        }
         if (intent != null && intent.hasExtra(Intent.EXTRA_USER_HANDLE)) {
             mUserId = ((UserHandle) intent.getParcelableExtra(Intent.EXTRA_USER_HANDLE))
                     .getIdentifier();
