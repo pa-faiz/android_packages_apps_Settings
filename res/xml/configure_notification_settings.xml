@@ -209,5 +209,12 @@
             android:summary="@string/less_boring_heads_up_summary"
             android:defaultValue="false"
             android:dependency="heads_up_notifications_enabled" />
+
+        <co.aospa.framework.preference.SystemSettingSwitchPreference
+            android:key="notification_force_non_dismissible"
+            android:order="29"
+            android:title="@string/notification_force_non_dismissible_title"
+            android:defaultValue="false"
+            android:summary="@string/notification_force_non_dismissible_summary" />
     </PreferenceCategory>
 </PreferenceScreen>
