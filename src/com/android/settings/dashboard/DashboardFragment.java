@@ -590,6 +590,10 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
                     } else if (SECURITY_PRIVACY_INJECTED_KEYS.contains(key)) {
                         group = screen.findPreference("top_level_security_privacy_category");
                     }
+                    // Order the prefs within their respective category
+                    if (KEY_ORDER.containsKey(key)) {
+                        pref.setOrder(KEY_ORDER.get(key));
+                    }
                     if (group instanceof PreferenceCategory) {
                         ((PreferenceCategory) group).addPreference(pref);
                     } else {
