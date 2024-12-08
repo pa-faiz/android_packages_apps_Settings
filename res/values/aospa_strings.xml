@@ -84,4 +84,8 @@
     <!-- volume panel control -->
     <string name="volume_panel_expandable_title">Expandable Volume Rows</string>
     <string name="volume_panel_expandable_summary">Expand the volume rows instead of displaying the volume bottom sheet.</string>
+
+    <!-- Navbar -->
+    <string name="navbar_tuner_title">Navbar tuner</string>
+    <string name="navbar_tuner_summary">Customize your navbar layout</string>
 </resources>
