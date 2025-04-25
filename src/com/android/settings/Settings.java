@@ -136,7 +136,6 @@ public class Settings extends SettingsActivity {
     public static class PowerButtonTorchSettingsActivity extends SettingsActivity { /* empty */ }
     public static class VolumeButtonMusicControlGestureSettingsActivity extends SettingsActivity { /* empty */ }
     public static class StatusBarSettingsActivity extends SettingsActivity { /* empty */ }
-    public static class NetworkTrafficSettingsActivity extends SettingsActivity { /* empty */ }
     public static class PowerMenuActionsActivity extends SettingsActivity { /* empty */ }
     public static class EdgeLightSettingsActivity extends SettingsActivity { /* empty */ }
     public static class HideDeveloperStatusSettingsActivity extends SettingsActivity { /* empty */ }
