@@ -24,6 +24,7 @@ import android.telephony.euicc.EuiccManager
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.SettingsApplications
 import androidx.compose.material.icons.outlined.SimCard
 import androidx.compose.material.icons.outlined.SimCardDownload
 import androidx.compose.runtime.Composable
@@ -57,6 +58,7 @@ fun SimsSection(subscriptionInfoList: List<SubscriptionInfo>) {
             SimPreference(subInfo)
         }
 
+        EsimSettings()
         AddSim()
     }
 }
@@ -137,4 +139,44 @@ private fun startAddSimFlow(context: Context) {
     intent.setPackage(Utils.PHONE_PACKAGE_NAME)
     intent.putExtra(EuiccManager.EXTRA_FORCE_PROVISION, true)
     context.startActivity(intent)
+}
+
+@Composable
+private fun EsimSettings() {
+    val context = LocalContext.current
+
+    val hasEsimSettingsPackage = remember {
+        try {
+            context.packageManager.getPackageInfo(Utils.ESIM_SETTINGS_PACKAGE_NAME, 0)
+            true
+        } catch (_: Exception) {
+            false
+        }
+    }
+
+    val res = context.resources
+    val euiccSlotsArrayId = remember {
+        res.getIdentifier("non_removable_euicc_slots", "array", "android")
+    }
+    val hasNonRemovableEuicc = remember {
+        euiccSlotsArrayId > 0 && (res.getIntArray(euiccSlotsArrayId)?.isNotEmpty() == true)
+    }
+
+    if (hasEsimSettingsPackage && hasNonRemovableEuicc) {
+        RestrictedPreference(
+            model =
+                object : PreferenceModel {
+                    override val title = stringResource(id = R.string.esim_settings_title)
+                    override val icon = @Composable { SettingsIcon(Icons.Outlined.SettingsApplications) }
+                    override val onClick = { startEsimSettingsFlow(context) }
+                },
+            restrictions = Restrictions(keys = listOf(UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS)),
+        )
+    }
+}
+
+fun startEsimSettingsFlow(context: Context) = context.startActivity(getEsimSettingsIntent())
+
+fun getEsimSettingsIntent() = Intent("org.lineageos.settings.device.ESIM_SETTINGS").apply {
+    setPackage(Utils.ESIM_SETTINGS_PACKAGE_NAME)
 }
